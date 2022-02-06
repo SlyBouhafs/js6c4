@@ -5,6 +5,7 @@ const fetchQuery = async (query, variables = {}) => {
     method: "post",
     headers: {
       "Content-Type": "application/json",
+      "Credentials": "include",
     },
     body: JSON.stringify({ query, variables }),
   });

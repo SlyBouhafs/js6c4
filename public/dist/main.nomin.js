@@ -560,7 +560,8 @@ const fetchQuery = async (query, variables = {}) => {
   const req = await fetch(GRAPHQL_API, {
     method: "post",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "Credentials": "include"
     },
     body: JSON.stringify({
       query,
